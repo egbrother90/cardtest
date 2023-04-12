@@ -1,48 +1,35 @@
 import './App.css';
+import { CardList } from './components/CardList';
 
 function App() {
-
-  const custom = [
+  const cards = [
     {
-      key: 1,
-      bgcolor: 'orange',
-      company: '(주)더존비즈온',
-      name: '김채원',
-      text3: 'text3'
+      id: 1,
+      title: 'card1',
+      description: 'This is card 1.'
     },
     {
-      key: 2,
-      bgcolor: 'blue',
-      text1: 'text0',
-      text2: 'text0',
-      text3: 'text0'
+      id: 2,
+      title: 'card1',
+      description: 'This is card 1.'
     },
     {
-      key: 3,
-      bgcolor: 'yellow',
-      text1: 'text7',
-      text2: 'text8',
-      text3: 'text9'
-    }
+      id: 3,
+      title: 'card1',
+      description: 'This is card 1.'
+    },
+    {
+      id: 4,
+      title: 'card1',
+      description: 'This is card 1.'
+    },
   ]
+
   return (
     <>
-      <div className="test-wrap custorm">
-        {custom.map(custom => {
-          return(
-            <div
-              style={{backgroundColor: custom.bgcolor}}
-              key={custom.key}
-            >
-              <ul>
-                <li>{custom.text1}</li>
-                <li>{custom.text2}</li>
-                <li>{custom.text3}</li>
-              </ul>
-            </div>
-          )
-        })}
-      </div>
+      <CardList
+        cards={cards}
+      />
     </>
   );
 }
