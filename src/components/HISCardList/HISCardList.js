@@ -1,12 +1,10 @@
 import React from "react";
-import Card from "./Card";
-import iconEmpty from '../CardList/icon-empty.svg';
+import HISCard from "./HISCard";
+import iconEmpty from '../HISCardList/icon-empty.svg';
 
-const cardlist = ({ cards, padding }) => {
+const HISCardList = ({ cards, padding }) => {
 
   const styleListPadding = padding ? `${padding}` : "";
-  // const styleOption = [stylePadding].join(' ').trimEnd();
-
 
   return(
     <>
@@ -14,11 +12,11 @@ const cardlist = ({ cards, padding }) => {
         cards ?
           <div className="card-list" style={{padding: `${styleListPadding}px`}}>
             {cards.map(card => (
-              <Card
+              <HISCard
                 key={card.id}
                 card={card}
               >
-              </Card>
+              </HISCard>
             ))}
           </div>
         :
@@ -33,4 +31,4 @@ const cardlist = ({ cards, padding }) => {
   )
 }
 
-export default cardlist;
+export default HISCardList;

@@ -1,6 +1,6 @@
 import './App.css';
-import { Card, CardList } from './components/CardList';
-import './components/CardList/CardList.scss';
+import { HISCard, HISCardList } from './components/HISCardList';
+import './components/HISCardList/HISCardList.scss';
 
 function App() {
   const cards = [
@@ -28,12 +28,12 @@ function App() {
 
   return (
     <>
-      <CardList
+      <HISCardList
         cards={cards}
-        padding='100'
+        padding='15'
       >
-        <Card />
-      </CardList>
+        <HISCard />
+      </HISCardList>
     </>
   );
 }
