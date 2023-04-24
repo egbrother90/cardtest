@@ -1,3 +1,3 @@
 import HISCardList from './HISCardList';
-import HISCard from './HISCard';
+import HISCard from './HISCardItems';
 export { HISCardList, HISCard }
