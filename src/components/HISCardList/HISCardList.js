@@ -4,6 +4,7 @@ import iconEmpty from '../HISCardList/icon-empty.svg';
 
 const HISCardList = ({ cards, cards2, padding, height }) => {
 
+  // 스타일
   const styleListPadding = padding ? `${padding}` : "";
   const styleListHeight = height ? `${height}` : "";
 
@@ -20,8 +21,6 @@ const HISCardList = ({ cards, cards2, padding, height }) => {
     }
     console.log()
   };
-
-
 
   const AllData = [
     ...cards,
@@ -51,25 +50,27 @@ const HISCardList = ({ cards, cards2, padding, height }) => {
     <>
       {
         cards ?
-          <div
-            className="card-list"
-            style={{
-              padding: `${styleListPadding}px`,
-              height: `${styleListHeight}px`
-            }}
-          >
-
-                <List
-                  rowCount={data.length}                            // 항목의 개수
-                  height={Number(height) - (Number(padding) * 2)}   // 실제 렌더링 되는 높이범위
-                  rowHeight={100}                                   // 항목의 높이
-                  width={100}                                       // 항목의 너비
-                  rowRenderer={rowRenderer}                         // 항목 렌더링 할 때 쓰는 함수
-                  onScroll={scrollListener}                         // scroll 함수
-                  overscanRowCount={1}                              // 다음에 로드해 올 항목 미리 컨텐츠 높이 잡기
-                />
-
-          </div>
+        <div
+          className="card-list"
+          style={{
+            padding: `${styleListPadding}px`,
+            height: `${styleListHeight}px`
+          }}
+        >
+          <AutoSizer disabledHeight>
+          {({ width }) => (
+            <List
+              rowCount={data.length}                            // 항목의 개수
+              height={Number(height) - (Number(padding) * 2)}   // 실제 렌더링 되는 높이범위
+              rowHeight={100}                                   // 항목의 높이
+              width={100}                                       // 항목의 너비
+              rowRenderer={rowRenderer}                         // 항목 렌더링 할 때 쓰는 함수
+              onScroll={scrollListener}                         // scroll 함수
+              overscanRowCount={1}                              // 다음에 로드해 올 항목 미리 컨텐츠 높이 잡기
+            />
+            )}
+          </AutoSizer>
+        </div>
         :
         <div className="empty">
           <div className="empty-inner">
