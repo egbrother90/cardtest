@@ -19,7 +19,6 @@ const HISCardList = ({ cards, cards2, padding, height }) => {
         ])
       }
     }
-    console.log()
   };
 
   const AllData = [
