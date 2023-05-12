@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { HISCard, HISCardList } from './components/HISCardList';
+import { HISCardList } from './components/HISCardList';
 import './components/HISCardList/HISCard.scss';
 
 function App() {
+
+  // 데이터
   const cards = [
     {
       id: 1,
@@ -70,9 +72,6 @@ function App() {
       title: 'Card13',
       description: 'This is card 13.'
     },
-  ]
-
-  const cards2 = [
     {
       id: 14,
       title: 'Card14',
@@ -109,216 +108,217 @@ function App() {
       description: 'This is card 20.'
     },
     {
-      id: 20,
+      id: 21,
       title: 'Card21',
       description: 'This is card 21.'
     },
     {
-      id: 20,
+      id: 22,
       title: 'Card22',
       description: 'This is card 22.'
     },
     {
-      id: 20,
+      id: 23,
       title: 'Card23',
       description: 'This is card 23.'
     },
     {
-      id: 20,
+      id: 24,
       title: 'Card24',
       description: 'This is card 24.'
     },
     {
-      id: 20,
+      id: 25,
       title: 'Card25',
       description: 'This is card 25.'
     },
     {
-      id: 20,
+      id: 26,
       title: 'Card26',
       description: 'This is card 26.'
     },
     {
-      id: 20,
+      id: 27,
       title: 'Card27',
       description: 'This is card 27.'
     },
     {
-      id: 20,
+      id: 28,
       title: 'Card28',
       description: 'This is card 28.'
     },
     {
-      id: 20,
+      id: 29,
       title: 'Card29',
       description: 'This is card 29.'
     },
     {
-      id: 20,
+      id: 30,
       title: 'Card30',
       description: 'This is card 30.'
     },
     {
-      id: 20,
+      id: 31,
       title: 'Card31',
       description: 'This is card 31.'
     },
     {
-      id: 20,
+      id: 32,
       title: 'Card32',
       description: 'This is card 32.'
     },
     {
-      id: 20,
+      id: 33,
       title: 'Card33',
       description: 'This is card 33.'
     },
     {
-      id: 20,
+      id: 34,
       title: 'Card34',
       description: 'This is card 34.'
     },
     {
-      id: 20,
+      id: 35,
       title: 'Card35',
       description: 'This is card 35.'
     },
     {
-      id: 20,
+      id: 36,
       title: 'Card36',
       description: 'This is card 36.'
     },
     {
-      id: 20,
+      id: 37,
       title: 'Card37',
       description: 'This is card 37.'
     },
     {
-      id: 20,
+      id: 38,
       title: 'Card38',
       description: 'This is card 38.'
     },
     {
-      id: 20,
+      id: 39,
       title: 'Card39',
       description: 'This is card 39.'
     },
     {
-      id: 20,
+      id: 40,
       title: 'Card40',
       description: 'This is card 40.'
     },
     {
-      id: 20,
+      id: 41,
       title: 'Card41',
       description: 'This is card 41.'
     },
     {
-      id: 20,
+      id: 42,
       title: 'Card42',
       description: 'This is card 42.'
     },
     {
-      id: 20,
+      id: 43,
       title: 'Card43',
       description: 'This is card 43.'
     },
     {
-      id: 20,
+      id: 44,
       title: 'Card44',
       description: 'This is card 44.'
     },
     {
-      id: 20,
+      id: 45,
       title: 'Card45',
       description: 'This is card 45.'
     },
     {
-      id: 20,
+      id: 46,
       title: 'Card46',
       description: 'This is card 46.'
     },
     {
-      id: 20,
+      id: 47,
       title: 'Card47',
       description: 'This is card 47.'
     },
     {
-      id: 20,
+      id: 48,
       title: 'Card48',
       description: 'This is card 48.'
     },
     {
-      id: 20,
+      id: 49,
       title: 'Card49',
       description: 'This is card 49.'
     },
     {
-      id: 20,
+      id: 50,
       title: 'Card50',
       description: 'This is card 50.'
     },
     {
-      id: 20,
+      id: 51,
       title: 'Card51',
       description: 'This is card 51.'
     },
     {
-      id: 20,
+      id: 52,
       title: 'Card52',
       description: 'This is card 52.'
     },
     {
-      id: 20,
+      id: 53,
       title: 'Card53',
       description: 'This is card 53.'
     },
     {
-      id: 20,
+      id: 54,
       title: 'Card54',
       description: 'This is card 54.'
     },
     {
-      id: 20,
+      id: 55,
       title: 'Card55',
       description: 'This is card 55.'
     },
     {
-      id: 20,
+      id: 56,
       title: 'Card56',
       description: 'This is card 56.'
     },
     {
-      id: 20,
+      id: 57,
       title: 'Card57',
       description: 'This is card 57.'
     },
     {
-      id: 20,
+      id: 58,
       title: 'Card58',
       description: 'This is card 58.'
     },
     {
-      id: 20,
+      id: 59,
       title: 'Card59',
       description: 'This is card 59.'
     },
     {
-      id: 20,
+      id: 60,
       title: 'Card60',
       description: 'This is card 60.'
     },
   ]
+
   return (
     <>
       <HISCardList
-        cards={cards}
-        cards2={cards2}
-        padding='30'
-        height='460'
-      >
-        <HISCard />
-      </HISCardList>
+        cards={cards}         // 데이터
+        listHeight='460'      // 리스트전체 높이
+        listPadding='30'      // 리스트 여백
+        cardPadding='15'      // 카드 여백
+        cardHeight='80'      // 카드 높이
+        cardMargin='8'
+      />
     </>
   );
 }

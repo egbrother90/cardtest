@@ -15,17 +15,11 @@
   border: 1px solid #E0E0E0;
   border-top: 2px solid #707070;
   background-color: #FAFAFA;
-  // overflow-y: auto;
   > div {
-    &::-webkit-scrollbar{width:10px;}
-    &::-webkit-scrollbar-track{background-color: #FAFAFA;}
-    &::-webkit-scrollbar-thumb{background:#000;border-left:4px solid #fafafa;}
-    &::-webkit-scrollbar-thumb:hover{background:red;}
-    &::-webkit-scrollbar-thumb:active{background:blue;}
-    &::-webkit-scrollbar-button { display: none; }
     width: 100% !important;
     [aria-label="grid"] {
       width: 100% !important;
+      overflow: visible !important;
     }
     [role="rowgroup"] {
       width: 100% !important;
@@ -42,6 +36,11 @@
       border-radius: 4px;
       background-color: #fff;
       box-sizing: border-box;
+      &:hover {
+        background-color: #EFF7FF;
+        border-color: #1C90FB;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+      }
     }
     &:first-of-type {
       padding-top: 0;
@@ -78,4 +77,22 @@
       color: #5d5d5d;
     }
   }
+}
+
+
+.trackVertical {
+  right: 2px;
+  bottom: 2px;
+  top: 2px;
+  border-radius: 3px;
+  transition: all 200ms ease !important;
+  > div {
+    background-color: red !important;
+  }
+}
+
+.trackVertical:hover,
+.trackVertical:active {
+  width: 12px !important;
+  border-radius: 8px !important;
 }
